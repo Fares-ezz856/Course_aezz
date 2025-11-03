@@ -1,0 +1,240 @@
+/* 1. التعديلات الأساسية لمرونة العناصر الكبيرة */
+*{
+    padding: 0;
+    margin: 0;
+    /* إضافة box-sizing لجعل الـ padding والـ border جزءاً من العرض المحدد */
+    box-sizing: border-box; 
+}
+header{
+    background-color: #ccc;
+    border-radius: 5px;
+}
+header img{
+    width: 100px;
+    padding: 20px;
+}
+
+/* --- Container 1: التقسيم العلوي (النموذج والصورة) --- */
+.container{
+    display: flex;
+    /* تغيير خلفية الصورة لتناسب التصميم الأصلي (لون أزرق غامق) */
+    background-color: dimgray; 
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.right-container{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    flex-basis: 50%;
+    /* إضافة مرونة للقسم الأيمن */
+    flex-grow: 1; 
+}
+.right-container img{
+    width: 60px;
+}
+.left-container{
+    flex-basis: 50%;
+    /* إضافة مرونة للقسم الأيسر */
+    flex-grow: 1; 
+}
+.left-container img{
+    /* التغيير الأهم: نجعل عرض الصورة مرنًا داخل حاويتها */
+    width: 100%; 
+    height: auto; /* الارتفاع يتحدد تلقائياً */
+    /* العرض الأصلي كان 600px، هذا يضمن أنه لا يتجاوز عرض الحاوية */
+    max-width: 600px; 
+    margin: 10px;
+    border-radius: 20px;
+    /* لضمان أنها لا تسبب تمدد */
+    display: block; 
+}
+.right-container h1, .right-container p{
+    margin: 15px;
+}
+
+.right-container input{
+    /* التغيير الأهم: نجعل عرض حقل الإدخال مرنًا */
+    width: 90%; 
+    max-width: 600px; /* لا يتجاوز العرض الأصلي في الشاشات الكبيرة */
+    padding-top: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.right-container input:last-child{
+    /* التغيير الأهم: نجعل عرض الزر مرنًا لكن أصغر */
+    width: 40%; 
+    max-width: 300px; /* لا يتجاوز العرض الأصلي */
+    background-color: rgb(0, 94, 255);
+    color: white;
+}
+
+
+/* --- Container 2: التقسيم السفلي (الصورة والفيديو) --- */
+/* --- Container 2: التقسيم السفلي (الصورة والفيديو) --- */
+.second-container{
+    display: flex;
+    background-color: dimgray;
+    /* ✅ تقليل الحشو وتقليل المساحة البيضاء الزائدة */
+    padding: 20px; 
+    border-radius: 10px;
+    align-items: flex-start; /* لضمان محاذاة العناصر إلى الأعلى */
+}
+
+.first-container{
+    text-align: center;
+    flex-basis: 50%;
+    flex-grow: 1;
+    /* ✅ إضافة حشو داخلي بسيط للفصل */
+    padding: 10px; 
+}
+
+.first-container img{
+    /* ✅ نجعل العرض يملأ المساحة المخصصة له بالكامل */
+    width: 100%; 
+    
+    /* ❌ إزالة خاصية max-width للسماح للعنصر بالتمدد لملء الفراغ */
+    /* max-width: 600px; */ 
+    
+    /* ✅ تحديد ارتفاع أكبر لتكبير العنصر بشكل رأسي */
+    height: 400px; 
+    
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover; 
+}
+
+.last-container{
+    flex-basis: 50%;
+    flex-grow: 1;
+    /* ✅ إضافة حشو داخلي بسيط للفصل */
+    padding: 10px; 
+}
+
+.last-container video{
+    /* ✅ نجعل العرض يملأ المساحة المخصصة له بالكامل */
+    width: 100%; 
+    
+    /* ❌ إزالة خاصية max-width للسماح للعنصر بالتمدد لملء الفراغ */
+    /* max-width: 600px; */ 
+    
+    /* ✅ تحديد ارتفاع أكبر ليتطابق مع الصورة */
+    height: 400px; 
+    
+    display: block;
+    margin: 0 auto; 
+    object-fit: cover; 
+}
+
+/* --- Footer: التذييل والأيقونات --- */
+/* --- Footer: التذييل والأيقونات --- */
+.footter{
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+.footter h1{
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+/* --- Footer: التذييل والأيقونات --- */
+.footter-icons {
+    display: flex;
+    /* 🔑 التغيير الأهم: استخدام justify-content: space-between */
+    justify-content: space-between; 
+    
+    /* 🔑 إضافة مسافة (Gap) بين العناصر للتأكد من وجود مسافة عند اللزوم */
+    gap: 20px; 
+    
+    width: 80%; 
+    max-width: 400px; 
+    margin: 0 auto; 
+    /* 🔑 تأكد من عدم وجود أي تنسيق يسبب محاذاة غير مرغوبة هنا */
+}
+
+/* 🔑 التغيير هنا: إلغاء الـ Padding من الأيقونات الفردية */
+.footter a i{
+    font-size: 30px;
+    /* تأكد من عدم وجود تنسيقات مثل margin/padding على الأيقونة نفسها (i) */
+}
+
+/* 🔑 إلغاء جميع التنسيقات الفردية المتعلقة بالـ Padding */
+#face, #insta, #youtube-link {
+    /* يجب أن يكون فارغاً أو محتوياً على تنسيقات لا تخص التباعد */
+    padding: 0; /* تأكد من أن الحشو (Padding) صفر */
+    margin: 0; /* وتأكد من أن الهامش (Margin) صفر */
+}
+/* ❌ إزالة التنسيقات الخاطئة التي كانت هنا */
+
+
+/*
+** 2. استعلامات الوسائط (Media Queries) - التعديل للهواتف **
+*/
+
+@media (max-width: 768px) {
+    
+    /* جعل التخطيط العلوي والسفلي عمودياً للهواتف */
+    .container, .second-container {
+        flex-direction: column; /* العناصر فوق بعضها البعض */
+        padding: 20px;
+    }
+
+    /* توسيط القسم الأيسر (الصورة) في الأعلى */
+    .left-container {
+        order: -1; /* لجعل الصورة تظهر أولاً قبل النموذج في الهواتف (اختياري) */
+        text-align: center;
+    }
+    .left-container img {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* جعل القسم الأيمن (النموذج) يأخذ العرض الكامل */
+    .right-container {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* تصغير حجم خط العنوان ليتناسب مع شاشة الهاتف */
+    .right-container h1 {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    /* جعل حقول الإدخال تأخذ العرض الكامل للهاتف */
+    .right-container input {
+        width: 100%;
+        max-width: none; /* إزالة الحد الأقصى للعرض */
+    }
+    .right-container input:last-child {
+        width: 60%; /* تكبير الزر قليلاً */
+        max-width: none;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    /* جعل الصورة والفيديو في القسم السفلي يأخذان العرض الكامل */
+    .first-container, .last-container {
+        width: 100%;
+        padding: 10px 0;
+    }
+    .first-container img, .last-container video {
+        width: 100%;
+        height: auto;
+    }
+    
+    /* جعل حجم خط التذييل أصغر على الهاتف */
+    .footter h1 {
+        font-size: 1.2em;
+    }
+    
+ .footter-icons {
+        width: 90%; /* ✅ زيادة العرض على الهواتف للاستفادة من المساحة */
+    }
+    .footter a i {
+        font-size: 24px; /* ✅ تصغير حجم الأيقونات ليتناسب مع الهاتف */
+    }
+}

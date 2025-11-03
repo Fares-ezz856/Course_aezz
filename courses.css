@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+header{
+    background-color: #ccc;
+    border-radius: 5px;
+    
+}
+.headerr{
+    display: flex;
+}
+header img{
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+.alinks a{
+text-decoration: none;
+align-items: end;
+text-align: end;
+font-weight: bold;
+color: black;
+padding-right: 10px;
+font-size: 20px;
+}
+
+.alinks a:last-child{
+    padding-right:10px ;
+    
+}
+.photo {
+    flex-basis: 50%;
+}
+.alinks{
+    flex-basis: 50%;
+    text-align: end;
+    padding-top: 80px;
+}
+
