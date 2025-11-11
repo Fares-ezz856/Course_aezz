@@ -15,6 +15,7 @@ if (ini_get("session.use_cookies")) {
 }
 
 // 4. تدمير الجلسة بالكامل من الخادم
+session_unset();
 session_destroy();
 
 // 5. التوجيه لصفحة تسجيل الدخول (login.html موجود في المجلد الأعلى)

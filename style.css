@@ -60,6 +60,8 @@ header img{
     padding-top: 20px;
     border-radius: 5px;
     box-sizing: border-box;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .right-container input:last-child{
     /* التغيير الأهم: نجعل عرض الزر مرنًا لكن أصغر */
@@ -67,6 +69,7 @@ header img{
     max-width: 300px; /* لا يتجاوز العرض الأصلي */
     background-color: rgb(0, 94, 255);
     color: white;
+    cursor: pointer;
 }
 
 

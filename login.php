@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: admin/login.html");
     } else {
         // توجيه المشترك العادي لصفحة الكورسات
-        header("Location: about.html");
+        header("Location: courses.html");
     }
     exit();
 

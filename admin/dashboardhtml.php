@@ -28,11 +28,12 @@ include 'dashboard.php';
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                   
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">الرئيسية</a>
+                        <a class="nav-link" href="../home.html">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../about.html">نبذة عني</a>
+                        <a class="nav-link" href="../courses.html"> المحتوى الأكاديمى</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../contact.html">تواصل معنا</a>
