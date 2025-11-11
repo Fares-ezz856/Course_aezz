@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+header{
+    background-color: #ccc;
+    border-radius: 5px;
+    
+}
+.headerr{
+    display: flex;
+}
+header img{
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+.alinks a{
+text-decoration: none;
+align-items: end;
+text-align: end;
+font-weight: bold;
+color: black;
+padding-right: 10px;
+font-size: 20px;
+}
+
+.alinks a:last-child{
+    padding-right:10px ;
+    
+}
+.photo {
+    flex-basis: 50%;
+}
+.alinks{
+    flex-basis: 50%;
+    text-align: end;
+    padding-top: 80px;
+}
+
+<<<<<<< HEAD
+.video-wrapper {
+    /* حدد أقصى عرض للفيديو هنا (مثلاً 600px كما طلبت سابقاً) */
+    max-width: 600px; 
+    
+    /* توسيط الفيديو في منتصف .main-content */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* مهم جداً: تأكد من أن الحاوية تأخذ الحجم الكامل */
+    width: 100%;
+}
+
+a[download] {
+    display: none !important;
+}
+.main-content{
+ padding: 40px 20px; 
+ /* ✅ إبقاء text-align: center لتوسيط العناصر البلوك */
+text-align: center;
+ background-color: #f4f4f4;
+ /* 🏆 إضافة هذا السطر: يضمن أن أي شيء يخرج عن حده يتم إخفاؤه */
+    overflow-x: hidden; 
+}
+
+.video-wrapper {
+ /* 🏆 هذا هو الحجم المصغر الذي تريده للفيديو (يمكنك تغييره) */
+ max-width: 600px; 
+ 
+ /* 🏆 لتوسيط الفيديو في المنتصف */
+margin: 0 auto;
+ /* margin-right: auto; */
+ 
+ /* تأكد من أن الحاوية تأخذ الحجم الكامل المتاح */
+width: 90%;
+}
+
+
+=======
+.main-content{
+    padding: 40px 20px; 
+    /* توسيط المحتوى الأفقي (إذا كانت العناصر بداخلها لا تأخذ عرض 100%) */
+    text-align: center;
+    background-color: #f4f4f4;
+}
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1
+.video video{
+  max-width: 800px; 
+    /* توسيط الحاوية نفسها في منتصف .main-content */
+    margin: 0 auto; 
+    /* العرض 100% ليملأ حتى Max-width المحدد */
+    width: 100%;
+    padding: 20px;
+    
+    
+}
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1
+/* --- تنسيق عروض الكورسات (Offers) --- */
+.offers {
+    /* ✅ تفعيل خاصية Flexbox */
+    display: flex;
+    /* ✅ توسيط العناصر الثلاثة في منتصف الصفحة أفقياً */
+    justify-content: center;
+    /* ✅ وضع مسافة بين كل عنصر وآخر */
+    gap: 20px; 
+    /* ✅ إضافة مسافة كبيرة من الأعلى والأسفل لفصلها عن باقي المحتوى */
+    padding: 50px 0; 
+    /* ✅ توسيط محتوى العرض بالكامل (اختياري) */
+    text-align: center;
+}
+.offers img{
+    width: 400px;
+}
+
+
+
+
+
+
+
+.footter {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.footter h1 {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* --- Footer: التذييل والأيقونات --- */
+.footter-icons {
+    display: flex;
+    /* 🔑 التغيير الأهم: استخدام justify-content: space-between */
+    justify-content: space-between;
+
+    /* 🔑 إضافة مسافة (Gap) بين العناصر للتأكد من وجود مسافة عند اللزوم */
+    gap: 20px;
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* 🔑 تأكد من عدم وجود أي تنسيق يسبب محاذاة غير مرغوبة هنا */
+}
+
+/* 🔑 التغيير هنا: إلغاء الـ Padding من الأيقونات الفردية */
+.footter a i {
+    font-size: 30px;
+    /* تأكد من عدم وجود تنسيقات مثل margin/padding على الأيقونة نفسها (i) */
+}
+
+/* 🔑 إلغاء جميع التنسيقات الفردية المتعلقة بالـ Padding */
+#face,
+#insta,
+#youtube-link {
+    /* يجب أن يكون فارغاً أو محتوياً على تنسيقات لا تخص التباعد */
+    padding: 0;
+    /* تأكد من أن الحشو (Padding) صفر */
+    margin: 0;
+    /* وتأكد من أن الهامش (Margin) صفر */
+}
+
+
+.footter h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    /* 1. جعل الـ header والقائمة عموديين إذا لزم الأمر */
+    .headerr {
+        flex-direction: column;
+        /* الروابط تحت الصورة */
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo,
+    .alinks {
+        flex-basis: 100%;
+        /* اجعلهم يأخذون العرض الكامل */
+        text-align: center;
+        /* توسيط الروابط */
+    }
+
+    .alinks {
+        padding-top: 10px;
+        /* تقليل المسافة العلوية */
+        padding-bottom: 10px;
+    }
+
+    /* 2. تصغير الخطوط الكبيرة لتناسب شاشات الهاتف */
+    .alinks a {
+        font-size: 1rem;
+        /* تصغير خطوط الروابط */
+        margin: 0 5px;
+        /* مسافة بسيطة بين الروابط */
+    }
+
+    .one h1 {
+        font-size: 1.8rem;
+        /* تصغير عنوان القسم الرئيسي */
+    }
+
+    .one h2 {
+        font-size: 1.2rem;
+        /* تصغير العناوين الفرعية */
+    }
+
+    .one p {
+        font-size: 0.9rem;
+        /* تصغير نص الجسم */
+    }
+
+    @media (max-width: 768px) {
+    /* ... (التنسيقات الحالية للهواتف) ... */
+    
+    .offers {
+        /* ✅ تغيير الترتيب ليصبح عموديًا على الهواتف */
+        flex-direction: column; 
+        /* ✅ توسيط العناصر العمودية */
+        align-items: center; 
+        padding: 30px 10px;
+    }
+    
+    .offers > div {
+        max-width: 90%; /* شغل معظم عرض الشاشة */
+        margin-bottom: 20px; /* فصل بين العناصر العمودية */
+    }
+}
+
+    .footter h1 {
+        font-size: 1.3rem;
+        /* تصغير نص التذييل */
+    }
+    .main-content img {
+        /* ✅ التأكد من أن عرضها لا يتجاوز 90% من الشاشة */
+        max-width: 90%; 
+        /* تقليل الهامش العلوي إذا لزم الأمر */
+        margin-top: 15px;
+    }
+
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1

@@ -1,0 +1,623 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ccc;
+    border-radius: 5px;
+
+}
+
+.headerr {
+    display: flex;
+}
+
+header img {
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.alinks a {
+    text-decoration: none;
+    align-items: end;
+    text-align: end;
+    font-weight: bold;
+    color: black;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.alinks a:last-child {
+    padding-right: 10px;
+
+}
+
+.photo {
+    flex-basis: 50%;
+}
+
+.alinks {
+    flex-basis: 50%;
+    text-align: end;
+    padding-top: 80px;
+}
+
+.one {
+    margin-top: 30px;
+    padding: 20px;
+
+    text-align: center;
+}
+
+.one img {
+    width: 800px;
+    margin-bottom: 20px;
+}
+
+.one h1 {
+    margin-bottom: 20px;
+}
+
+.one h2 {
+    margin-bottom: 20px;
+}
+
+.one p {
+    margin: 20px;
+    padding: 10px;
+}
+
+.footter {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.footter h1 {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* --- Footer: التذييل والأيقونات --- */
+.footter-icons {
+    display: flex;
+    /* 🔑 التغيير الأهم: استخدام justify-content: space-between */
+    justify-content: space-between;
+
+    /* 🔑 إضافة مسافة (Gap) بين العناصر للتأكد من وجود مسافة عند اللزوم */
+    gap: 20px;
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* 🔑 تأكد من عدم وجود أي تنسيق يسبب محاذاة غير مرغوبة هنا */
+}
+
+/* 🔑 التغيير هنا: إلغاء الـ Padding من الأيقونات الفردية */
+.footter a i {
+    font-size: 30px;
+    /* تأكد من عدم وجود تنسيقات مثل margin/padding على الأيقونة نفسها (i) */
+}
+
+/* 🔑 إلغاء جميع التنسيقات الفردية المتعلقة بالـ Padding */
+#face,
+#insta,
+#youtube-link {
+    /* يجب أن يكون فارغاً أو محتوياً على تنسيقات لا تخص التباعد */
+    padding: 0;
+    /* تأكد من أن الحشو (Padding) صفر */
+    margin: 0;
+    /* وتأكد من أن الهامش (Margin) صفر */
+}
+
+/* --- 1. التعديلات الأساسية (قبل استعلام الوسائط) --- */
+
+/* 🔑 استخدام وحدات مرنة لحجم الخط في الـ header */
+.alinks a {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    font-size: 1.2rem;
+    /* تم تغيير 20px إلى 1.2rem */
+    /* ... (بقية التنسيقات) ... */
+}
+
+/* 🔑 تطبيق وحدات مرنة على النصوص في قسم .one */
+.one h1 {
+    font-size: 2.5rem;
+    /* حجم كبير للشاشات العادية */
+    margin-bottom: 20px;
+}
+
+.one h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.one p {
+    font-size: 1rem;
+    /* حجم الخط الأساسي للجسم */
+    margin: 20px;
+    padding: 10px;
+}
+
+.one img {
+    /* ⚠️ يجب أن تكون الصورة مرنة أكثر */
+    max-width: 800px;
+    width: 90%;
+    /* نغير 800px الثابتة إلى نسبة مئوية مرنة */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.opinion {
+    text-align: center;
+}
+
+.titl h1 {
+    background-color: #ccc;
+    margin-bottom: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.comment1 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment1 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment1 h3 {
+    padding: 6px;
+}
+
+.comment2 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment2 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment2 h3 {
+    padding: 6px;
+}
+.comment3{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment3 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment3 h3 {
+    padding: 6px;
+}
+.comment4 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment4 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment4 h3 {
+    padding: 6px;
+}
+.comment5 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment5 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment5 h3 {
+    padding: 6px;
+}
+.comment6{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment6 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment6 h3 {
+    padding: 6px;
+}
+
+
+.comment7 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment7 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment7 h3 {
+    padding: 6px;
+}
+
+.comment8 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment8 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment8 h3 {
+    padding: 6px;
+}
+
+.comment9 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment9 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment9 h3 {
+    padding: 6px;
+}
+
+.comment10 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment10 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment10 h3 {
+    padding: 6px;
+}
+
+.comment11 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment11 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment11 h3 {
+    padding: 6px;
+}
+
+.comment12 {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.comment12 img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.comment12 h3 {
+    padding: 6px;
+}
+.footter h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* ---------------------------------------------------- */
+/* ## 📱 استعلام الوسائط للتجاوب مع الهواتف (Max-width: 768px) */
+
+@media (max-width: 768px) {
+
+    /* 1. جعل الـ header والقائمة عموديين إذا لزم الأمر */
+    .headerr {
+        flex-direction: column;
+        /* الروابط تحت الصورة */
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo,
+    .alinks {
+        flex-basis: 100%;
+        /* اجعلهم يأخذون العرض الكامل */
+        text-align: center;
+        /* توسيط الروابط */
+    }
+
+    .alinks {
+        padding-top: 10px;
+        /* تقليل المسافة العلوية */
+        padding-bottom: 10px;
+    }
+
+    /* 2. تصغير الخطوط الكبيرة لتناسب شاشات الهاتف */
+    .alinks a {
+        font-size: 1rem;
+        /* تصغير خطوط الروابط */
+        margin: 0 5px;
+        /* مسافة بسيطة بين الروابط */
+    }
+
+    .one h1 {
+        font-size: 1.8rem;
+        /* تصغير عنوان القسم الرئيسي */
+    }
+
+    .one h2 {
+        font-size: 1.2rem;
+        /* تصغير العناوين الفرعية */
+    }
+
+    .one p {
+        font-size: 0.9rem;
+        /* تصغير نص الجسم */
+    }
+
+    .footter h1 {
+        font-size: 1.3rem;
+        /* تصغير نص التذييل */
+    }
+}

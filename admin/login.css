@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ccc;
+    border-radius: 5px;
+
+}
+
+.headerr {
+    display: flex;
+}
+
+header img {
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.photo {
+    flex-basis: 50%;
+}
+.main{
+      display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin: 90px auto;
+
+    max-width: 600px;
+
+    background-color: #f9f9f9;
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+}
+.main input{
+    padding: 10px;
+}
+.main input:last-child{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.footter {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.footter h1 {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* --- Footer: التذييل والأيقونات --- */
+.footter-icons {
+    display: flex;
+    /* 🔑 التغيير الأهم: استخدام justify-content: space-between */
+    justify-content: space-between;
+
+    /* 🔑 إضافة مسافة (Gap) بين العناصر للتأكد من وجود مسافة عند اللزوم */
+    gap: 20px;
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* 🔑 تأكد من عدم وجود أي تنسيق يسبب محاذاة غير مرغوبة هنا */
+}
+
+/* 🔑 التغيير هنا: إلغاء الـ Padding من الأيقونات الفردية */
+.footter a i {
+    font-size: 30px;
+    /* تأكد من عدم وجود تنسيقات مثل margin/padding على الأيقونة نفسها (i) */
+}
+
+/* 🔑 إلغاء جميع التنسيقات الفردية المتعلقة بالـ Padding */
+#face,
+#insta,
+#youtube-link {
+    /* يجب أن يكون فارغاً أو محتوياً على تنسيقات لا تخص التباعد */
+    padding: 0;
+    /* تأكد من أن الحشو (Padding) صفر */
+    margin: 0;
+    /* وتأكد من أن الهامش (Margin) صفر */
+}
+
+/* --- 1. التعديلات الأساسية (قبل استعلام الوسائط) --- */
+
+/* 🔑 استخدام وحدات مرنة لحجم الخط في الـ header */
+.alinks a {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    font-size: 1.2rem;
+    /* تم تغيير 20px إلى 1.2rem */
+    /* ... (بقية التنسيقات) ... */
+}
+
+

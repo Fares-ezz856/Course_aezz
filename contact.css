@@ -1,0 +1,189 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #ccc;
+    border-radius: 5px;
+
+}
+
+.headerr {
+    display: flex;
+}
+
+header img {
+    width: 100px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.alinks a {
+    text-decoration: none;
+    align-items: end;
+    text-align: end;
+    font-weight: bold;
+    color: black;
+    padding-right: 10px;
+    font-size: 20px;
+}
+
+.alinks a:last-child {
+    padding-right: 10px;
+
+}
+
+.photo {
+    flex-basis: 50%;
+}
+
+.alinks {
+    flex-basis: 50%;
+    text-align: end;
+    padding-top: 80px;
+}
+.main-content{
+    text-align: center;
+    align-items: center;
+    display: block;
+}
+.main-content img {
+    /* ❌ التنسيق الأصلي: width: 800px; */
+    /* ✅ التعديل: نجعلها لا تتجاوز عرض العنصر الأب */
+    max-width: 100%; 
+    height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+    margin: 15px;
+    margin-top: 25px;
+}
+.main-content button{
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #ccc;
+    margin-bottom: 15px;
+}
+.main-content button a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.footter {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    background-color: #ccc;
+    border-radius: 10px;
+    padding: 20px 0;
+}
+
+.footter h1 {
+    /* ... (التنسيقات الأخرى كما هي) ... */
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* --- Footer: التذييل والأيقونات --- */
+.footter-icons {
+    display: flex;
+    /* 🔑 التغيير الأهم: استخدام justify-content: space-between */
+    justify-content: space-between;
+
+    /* 🔑 إضافة مسافة (Gap) بين العناصر للتأكد من وجود مسافة عند اللزوم */
+    gap: 20px;
+
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* 🔑 تأكد من عدم وجود أي تنسيق يسبب محاذاة غير مرغوبة هنا */
+}
+
+/* 🔑 التغيير هنا: إلغاء الـ Padding من الأيقونات الفردية */
+.footter a i {
+    font-size: 30px;
+    /* تأكد من عدم وجود تنسيقات مثل margin/padding على الأيقونة نفسها (i) */
+}
+
+/* 🔑 إلغاء جميع التنسيقات الفردية المتعلقة بالـ Padding */
+#face,
+#insta,
+#youtube-link {
+    /* يجب أن يكون فارغاً أو محتوياً على تنسيقات لا تخص التباعد */
+    padding: 0;
+    /* تأكد من أن الحشو (Padding) صفر */
+    margin: 0;
+    /* وتأكد من أن الهامش (Margin) صفر */
+}
+
+
+.footter h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+/* ---------------------------------------------------- */
+/* ## 📱 استعلام الوسائط للتجاوب مع الهواتف (Max-width: 768px) */
+
+@media (max-width: 768px) {
+
+    /* 1. جعل الـ header والقائمة عموديين إذا لزم الأمر */
+    .headerr {
+        flex-direction: column;
+        /* الروابط تحت الصورة */
+        align-items: center;
+        text-align: center;
+    }
+
+    .photo,
+    .alinks {
+        flex-basis: 100%;
+        /* اجعلهم يأخذون العرض الكامل */
+        text-align: center;
+        /* توسيط الروابط */
+    }
+
+    .alinks {
+        padding-top: 10px;
+        /* تقليل المسافة العلوية */
+        padding-bottom: 10px;
+    }
+
+    /* 2. تصغير الخطوط الكبيرة لتناسب شاشات الهاتف */
+    .alinks a {
+        font-size: 1rem;
+        /* تصغير خطوط الروابط */
+        margin: 0 5px;
+        /* مسافة بسيطة بين الروابط */
+    }
+
+    .one h1 {
+        font-size: 1.8rem;
+        /* تصغير عنوان القسم الرئيسي */
+    }
+
+    .one h2 {
+        font-size: 1.2rem;
+        /* تصغير العناوين الفرعية */
+    }
+
+    .one p {
+        font-size: 0.9rem;
+        /* تصغير نص الجسم */
+    }
+
+    .footter h1 {
+        font-size: 1.3rem;
+        /* تصغير نص التذييل */
+    }
+    .main-content img {
+        /* ✅ التأكد من أن عرضها لا يتجاوز 90% من الشاشة */
+        max-width: 90%; 
+        /* تقليل الهامش العلوي إذا لزم الأمر */
+        margin-top: 15px;
+    }
+
+}
