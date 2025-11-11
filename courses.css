@@ -40,6 +40,7 @@ font-size: 20px;
     padding-top: 80px;
 }
 
+<<<<<<< HEAD
 .video-wrapper {
     /* حدد أقصى عرض للفيديو هنا (مثلاً 600px كما طلبت سابقاً) */
     max-width: 600px; 
@@ -77,6 +78,14 @@ width: 90%;
 }
 
 
+=======
+.main-content{
+    padding: 40px 20px; 
+    /* توسيط المحتوى الأفقي (إذا كانت العناصر بداخلها لا تأخذ عرض 100%) */
+    text-align: center;
+    background-color: #f4f4f4;
+}
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1
 .video video{
   max-width: 800px; 
     /* توسيط الحاوية نفسها في منتصف .main-content */
@@ -88,7 +97,10 @@ width: 90%;
     
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1
 /* --- تنسيق عروض الكورسات (Offers) --- */
 .offers {
     /* ✅ تفعيل خاصية Flexbox */
@@ -241,4 +253,8 @@ width: 90%;
         margin-top: 15px;
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 73cda19d092633f4c04f96c9276976e384b82ec1
