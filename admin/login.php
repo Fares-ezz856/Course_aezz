@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <?php session_start(); if(isset($_SESSION['login_error'])){
+           echo '<p style="color: red; text-align: center; font-size: 30px; position: absolute; top: 10px; width: 100%;">' . $_SESSION['login_error'] . '</p>';
+           unset($_SESSION['login_error']);
+    } ?>
       <header>
         <div class="headerr">
             <div class="photo">

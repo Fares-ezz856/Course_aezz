@@ -142,7 +142,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
     if ($safe_email == $admin_email) {
         // توجيه المشرف لصفحة تسجيل الدخول (login.html)
-        header("Location: admin/login.html");
+        header("Location: admin/login.php");
     } else {
         // توجيه المشترك العادي لصفحة الكورسات
         header("Location: courses.html");
