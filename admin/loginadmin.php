@@ -26,13 +26,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else {
         // فشل الدخول
         $_SESSION['login_error'] = "خطأ في البريد الإلكتروني أو كلمة المرور.";
-        header("Location: login.html");
+        header("Location: login.php");
         exit();
     }
 }
 else{
     // توجيه لصفحة الدخول إذا لم يكن الطلب POST
-header("Location: login.html");
+header("Location: login.php");
     exit();
 }
 
